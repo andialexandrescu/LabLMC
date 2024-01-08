@@ -1,5 +1,5 @@
-vertical(line(point(X,Y),point(X,Z))).
-horizontal(line(point(X,Y),point(Z,Y))).
+vertical(line(point(X,Y1),point(X,Y2))).
+horizontal(line(point(X1,Y),point(X2,Y))).
 
 f(a).
 f(b).

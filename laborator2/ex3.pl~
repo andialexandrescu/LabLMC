@@ -5,5 +5,5 @@ triunghi(X,C) :- X>0, Y is X-1, linie(X,C), nl, triunghi(Y,C).% va afisa diag pr
 
 dreptunghi(0,_,_).
 dreptunghi(X,Z,C) :- X>0, Y is X-1, linie(Z,C), nl, dreptunghi(Y,Z,C).
-patrat(X,_,C) :- dreptunghi(X,X,C).
+patrat(X,C) :- dreptunghi(X,X,C).
 

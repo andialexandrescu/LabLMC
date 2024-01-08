@@ -31,5 +31,4 @@ uncle_of(U,P) :- parent(X,P),  brother_of(U,X).
 cousin_of(Co, P) :- parent(X,P), (sister_of(Y,X); brother_of(Y,X)), parent(Y, Co).
 
 not_parent1(X,Y) :- \+ parent(X,Y).
-not_parent2(X,Y) :- not((mother_of(X,Y); father_of(X,Y))).
-
+not_parent2(X,Y) :- (male(X); female(X)), (male(Y); female(Y)), (mother_of(X,Y); father_of(X,Y)).
