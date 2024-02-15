@@ -1,0 +1,8 @@
+% ex1
+consec([]).
+consec([_]).
+consec([X,Y|T]) :- Y =:= X-1, consec([Y|T]).
+% ex2
+lista_angajati([],_,[]).
+lista_angajati([angajat(Nume, Salariu)|ListaAngajati], PragSalariu, [Nume|ListareRezultat]) :- Salariu>PragSalariu, listare_angajati(ListaAngajati, PragSalariu, ListareRezultat).
+lista_angajati([angajat(_, Salariu)|ListaAngajati], PragSalariu, ListareRezultat) :- Salariu=<PragSalariu, listare_angajati(ListaAngajati, PragSalariu, ListareRezultat).
